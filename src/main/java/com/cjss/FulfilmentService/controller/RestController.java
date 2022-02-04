@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class RestController {
     @Autowired
     private FulfilmentService service;
-    @PostMapping("/")
+    @PostMapping("/update-item-status")
     public StatusUpdate statusUpdate(@RequestBody StatusUpdate statusUpdate){
         return  service.upadateStatus(statusUpdate);
     }

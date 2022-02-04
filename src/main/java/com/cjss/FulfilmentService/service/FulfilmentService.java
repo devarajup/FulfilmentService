@@ -11,7 +11,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class FulfilmentService {
      RestTemplate rt = new RestTemplate();
 public StatusUpdate upadateStatus(StatusUpdate statusUpdate){
-    String url = UriComponentsBuilder.fromUriString("http://localhost:8084/update-order-status")
+    String url = UriComponentsBuilder.fromUriString("http://localhost:8084/update-item-status")
            .build().toUriString();
     ResponseEntity<StatusUpdate> result = rt.postForEntity(url, statusUpdate, StatusUpdate.class);
   return    result.getBody();
